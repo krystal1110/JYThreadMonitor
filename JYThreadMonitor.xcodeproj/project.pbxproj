@@ -17,6 +17,9 @@
 		FB433C6427E771EC00CAF6E2 /* JYThreadMonitorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB433C6327E771EC00CAF6E2 /* JYThreadMonitorTests.m */; };
 		FB433C6E27E771EC00CAF6E2 /* JYThreadMonitorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB433C6D27E771EC00CAF6E2 /* JYThreadMonitorUITests.m */; };
 		FB433C7027E771EC00CAF6E2 /* JYThreadMonitorUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB433C6F27E771EC00CAF6E2 /* JYThreadMonitorUITestsLaunchTests.m */; };
+		FB433C8427E7720000CAF6E2 /* JYCallStack.m in Sources */ = {isa = PBXBuildFile; fileRef = FB433C8027E7720000CAF6E2 /* JYCallStack.m */; };
+		FB433C8527E7720000CAF6E2 /* JYCallStackSymbol.m in Sources */ = {isa = PBXBuildFile; fileRef = FB433C8127E7720000CAF6E2 /* JYCallStackSymbol.m */; };
+		FB433C8627E7720000CAF6E2 /* JYThreadMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = FB433C8227E7720000CAF6E2 /* JYThreadMonitor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,12 @@
 		FB433C6927E771EC00CAF6E2 /* JYThreadMonitorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JYThreadMonitorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB433C6D27E771EC00CAF6E2 /* JYThreadMonitorUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYThreadMonitorUITests.m; sourceTree = "<group>"; };
 		FB433C6F27E771EC00CAF6E2 /* JYThreadMonitorUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYThreadMonitorUITestsLaunchTests.m; sourceTree = "<group>"; };
+		FB433C7E27E7720000CAF6E2 /* JYCallStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYCallStack.h; sourceTree = "<group>"; };
+		FB433C7F27E7720000CAF6E2 /* JYCallStackSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYCallStackSymbol.h; sourceTree = "<group>"; };
+		FB433C8027E7720000CAF6E2 /* JYCallStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYCallStack.m; sourceTree = "<group>"; };
+		FB433C8127E7720000CAF6E2 /* JYCallStackSymbol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYCallStackSymbol.m; sourceTree = "<group>"; };
+		FB433C8227E7720000CAF6E2 /* JYThreadMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYThreadMonitor.m; sourceTree = "<group>"; };
+		FB433C8327E7720000CAF6E2 /* JYThreadMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYThreadMonitor.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +113,7 @@
 		FB433C4627E771EB00CAF6E2 /* JYThreadMonitor */ = {
 			isa = PBXGroup;
 			children = (
+				FB433C7C27E7720000CAF6E2 /* JYThreadMonitor */,
 				FB433C4727E771EB00CAF6E2 /* AppDelegate.h */,
 				FB433C4827E771EB00CAF6E2 /* AppDelegate.m */,
 				FB433C4A27E771EB00CAF6E2 /* SceneDelegate.h */,
@@ -134,6 +144,27 @@
 				FB433C6F27E771EC00CAF6E2 /* JYThreadMonitorUITestsLaunchTests.m */,
 			);
 			path = JYThreadMonitorUITests;
+			sourceTree = "<group>";
+		};
+		FB433C7C27E7720000CAF6E2 /* JYThreadMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				FB433C7D27E7720000CAF6E2 /* JYCallStack */,
+				FB433C8227E7720000CAF6E2 /* JYThreadMonitor.m */,
+				FB433C8327E7720000CAF6E2 /* JYThreadMonitor.h */,
+			);
+			path = JYThreadMonitor;
+			sourceTree = "<group>";
+		};
+		FB433C7D27E7720000CAF6E2 /* JYCallStack */ = {
+			isa = PBXGroup;
+			children = (
+				FB433C7E27E7720000CAF6E2 /* JYCallStack.h */,
+				FB433C7F27E7720000CAF6E2 /* JYCallStackSymbol.h */,
+				FB433C8027E7720000CAF6E2 /* JYCallStack.m */,
+				FB433C8127E7720000CAF6E2 /* JYCallStackSymbol.m */,
+			);
+			path = JYCallStack;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,8 +298,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB433C4F27E771EB00CAF6E2 /* ViewController.m in Sources */,
+				FB433C8627E7720000CAF6E2 /* JYThreadMonitor.m in Sources */,
 				FB433C4927E771EB00CAF6E2 /* AppDelegate.m in Sources */,
 				FB433C5A27E771EC00CAF6E2 /* main.m in Sources */,
+				FB433C8527E7720000CAF6E2 /* JYCallStackSymbol.m in Sources */,
+				FB433C8427E7720000CAF6E2 /* JYCallStack.m in Sources */,
 				FB433C4C27E771EB00CAF6E2 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

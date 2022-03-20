@@ -6,7 +6,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "JYThreadMonitor.h"
 @interface AppDelegate ()
 
 @end
@@ -16,6 +16,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [JYThreadMonitor startMonitor];
+    
     return YES;
 }
 
